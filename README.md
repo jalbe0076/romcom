@@ -15,7 +15,8 @@ A website allowing users to save custom book titles was created. The user has th
 ### Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
 
-![Alt text](../Untitled.jpg)
+![Untitled](https://user-images.githubusercontent.com/123283073/229319940-dc702377-c13e-495d-9eec-b8598c666a93.jpg)
+
 
 ### Context:
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
@@ -25,8 +26,7 @@ We were assigned the project on 3/28/23 and had until 4/2/23 to work on the proj
 ### Contributors:
 [//]: <> (Who worked on this application? Link to their GitHubs.)
 
-[Jason Alberto](https://github.com/jalbe0076)
-[Caitlin Cradick](https://github.com/caitlincradick) 
+[Jason Alberto](https://github.com/jalbe0076) & [Caitlin Cradick](https://github.com/caitlincradick) 
 
 ### Learning Goals:
 [//]: <> (What were the learning goals of this project? What tech did you work with?)
