@@ -29,21 +29,25 @@ randomCoverButton.addEventListener('click', createRandomCover);
 
 makeCoverButton.addEventListener('click', function() {
   togglePage(coverForm);
+  showButtons();
 });
 
 viewSavedButton.addEventListener('click', function() {
   togglePage(saveView);
   displaySavedCovers();
+  showButtons();
 });
 
 homeButton.addEventListener('click', function() {
   togglePage(homeView);
+  showButtons();
 });
 
 makeBookButton.addEventListener('click', function(event) {
   event.preventDefault();
   createBook();
   displayBook();
+  showButtons();
 }); 
 
 saveCoverButton.addEventListener('click', saveCover);
@@ -65,26 +69,29 @@ function togglePage(page) {
     viewPages[i].classList.add('hidden');
   }
   page.classList.remove('hidden');
+}
 
+function showButtons() {
   if (!homeView.classList.contains('hidden')) {
     homeButton.classList.add('hidden');
     randomCoverButton.classList.remove('hidden');
     saveCoverButton.classList.remove('hidden');
     viewSavedButton.classList.remove('hidden');
-  }
-
-  if (!saveView.classList.contains('hidden')) {
+    console.log('i am the homeview')
+  } else if (!saveView.classList.contains('hidden')) {
     saveCoverButton.classList.add('hidden');
     randomCoverButton.classList.add('hidden');
     homeButton.classList.remove('hidden');
-  }
-
-  if (!coverForm.classList.contains('hidden')) {
+    console.log('am am the save view')
+  } else if (!coverForm.classList.contains('hidden')) {
     randomCoverButton.classList.add('hidden');
-    viewSavedButton.classList.add('hidden');
     homeButton.classList.remove('hidden');
+    saveCoverButton.classList.add('hidden');
+    console.log('i am the cover form')
   }
 }
+
+
 
 function createBook() {
   if (!userCoverInput.value || !userTitleInput.value || !userDesc1Input.value || !userDesc2Input.value) {
@@ -133,8 +140,6 @@ function displaySavedCovers() {
 }
 
 function deleteCover(event) {
-  // event.target.parentNode.id
-  // event.target.parentNode.id.remove();
   for (var i = 0; i < savedCovers.length; i++) {
     if (savedCovers[i].id === Number(event.target.parentNode.id)) {
       savedCovers.splice(i, 1);
